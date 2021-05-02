@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $.ajaxSetup({ cache: false });
     $.getJSON("under45centres.json", function (data) {
         for (var i = 0; i < data.states.length; i++) {
             if (data.states[i].count === 0) {
